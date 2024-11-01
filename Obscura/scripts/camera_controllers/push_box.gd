@@ -7,7 +7,9 @@ extends CameraControllerBase
 
 
 func _ready() -> void:
+	#always call super in _ready
 	super()
+	draw_camera_logic = true
 	position = target.position
 	
 
@@ -21,24 +23,26 @@ func _process(delta: float) -> void:
 	var tpos = target.global_position
 	var cpos = global_position
 	
-	#boundary checks
-	#left
+	# boundary checks
+	# left
 	var diff_between_left_edges = (tpos.x - target.WIDTH / 2.0) - (cpos.x - box_width / 2.0)
 	if diff_between_left_edges < 0:
 		global_position.x += diff_between_left_edges
-	#right
+	# right
 	var diff_between_right_edges = (tpos.x + target.WIDTH / 2.0) - (cpos.x + box_width / 2.0)
 	if diff_between_right_edges > 0:
 		global_position.x += diff_between_right_edges
-	#top
+	# top
 	var diff_between_top_edges = (tpos.z - target.HEIGHT / 2.0) - (cpos.z - box_height / 2.0)
 	if diff_between_top_edges < 0:
 		global_position.z += diff_between_top_edges
-	#bottom
+	# bottom
 	var diff_between_bottom_edges = (tpos.z + target.HEIGHT / 2.0) - (cpos.z + box_height / 2.0)
 	if diff_between_bottom_edges > 0:
 		global_position.z += diff_between_bottom_edges
 		
+		
+	
 	super(delta)
 
 
@@ -76,6 +80,6 @@ func draw_logic() -> void:
 	mesh_instance.global_transform = Transform3D.IDENTITY
 	mesh_instance.global_position = Vector3(global_position.x, target.global_position.y, global_position.z)
 	
-	#mesh is freed after one update of _process
+	# mesh is freed after one update of _process
 	await get_tree().process_frame
 	mesh_instance.queue_free()
