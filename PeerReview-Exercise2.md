@@ -21,8 +21,8 @@ If you are in a rare situation where two peer-reviewers are on a single reposito
 
 ## Peer-reviewer Information
 
-* *name:* [your name here] 
-* *email:* [your @ucdavis.edu email address here]
+* *name:* Ryan Ffrench
+* *email:* rffrench@ucdavis.edu
 
 ### Description ###
 
@@ -52,7 +52,7 @@ ___
 
 ### Stage 1 ###
 
-- [ ] Perfect
+- [X] Perfect
 - [ ] Great
 - [ ] Good
 - [ ] Satisfactory
@@ -61,12 +61,12 @@ ___
 ___
 #### Justification ##### 
 Write Justification here.
-
+Works as intended: camera locks to the player
 ___
 ### Stage 2 ###
 
 - [ ] Perfect
-- [ ] Great
+- [X] Great
 - [ ] Good
 - [ ] Satisfactory
 - [ ] Unsatisfactory
@@ -74,24 +74,25 @@ ___
 ___
 #### Justification ##### 
 Write Justification here.
+Works mostly as intended. The camera autoscrolls as it is supposed to. Only issue is the player should be able to go everywhere within the camera view not just a small box in the top corner.
 
 ___
 ### Stage 3 ###
 
 - [ ] Perfect
-- [ ] Great
+- [X] Great
 - [ ] Good
 - [ ] Satisfactory
 - [ ] Unsatisfactory
 
 ___
 #### Justification ##### 
-Write Justification here.
+This implementation works as intended, but the leash distance is too high. With the default zoom level the player goes off screen. Once I zoomed out everything worked perfectly.
 
 ___
 ### Stage 4 ###
 
-- [ ] Perfect
+- [X] Perfect
 - [ ] Great
 - [ ] Good
 - [ ] Satisfactory
@@ -99,12 +100,12 @@ ___
 
 ___
 #### Justification ##### 
-Write Justification here.
+This stage has the same issue as stage three. Otherwise worked perfectly once I zoomed out. I don't think it is fair to take points off twice for the same issue.
 
 ___
 ### Stage 5 ###
 
-- [ ] Perfect
+- [X] Perfect
 - [ ] Great
 - [ ] Good
 - [ ] Satisfactory
@@ -112,7 +113,8 @@ ___
 
 ___
 #### Justification ##### 
-Write Justification here.
+This stage has the same issue with zoom as the others. Otherwise perfectly implements a 4-way speedup push zone.
+
 ___
 # Code Style #
 
@@ -130,9 +132,9 @@ Please refer to the first code review template on how to do a permalink.
 
 
 #### Style Guide Infractions ####
-
+None
 #### Style Guide Exemplars ####
-
+Many comments throught code that explain everything well.
 ___
 #### Put style guide infractures ####
 
@@ -150,5 +152,6 @@ If the student has breached the best practices and has done something that shoul
 This should be similar to the Code Style justification.
 
 #### Best Practices Infractions ####
-
+None
 #### Best Practices Exemplars ####
+I particularly like the [Speedup zone implementation](https://github.com/ensemble-ai/exercise-2-camera-control-Andrew-Fojas/blob/762547f8b95dbecd33b84b9b015090aa6a944229/Obscura/scripts/camera_controllers/speedup_push_zone.gd#L22)
